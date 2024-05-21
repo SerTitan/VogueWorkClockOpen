@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="VogueWorkClock.Views.RecognizeSamplePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:VogueWorkClock.ViewModels"
+    x:DataType="vm:RecognizeSampleViewModel">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25"
+            VerticalOptions="Center">
+
+            <StackLayout Orientation="Horizontal" Spacing="10">
+                <Picker
+                    x:Name="SeasonPicker"
+                    Title="Сезон"
+                    HorizontalOptions="FillAndExpand"
+                    SelectedItem="{Binding SelectedSeason}"
+                    VerticalOptions="CenterAndExpand">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>AW</x:String>
+                            <x:String>SS</x:String>
+                            <x:String>FW</x:String>
+                            <x:String>PS</x:String>
+                            <x:String>RS</x:String>
+                            <x:String>HS</x:String>
+                            <x:String>BC</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <Picker
+                    x:Name="YearPicker"
+                    Title="Год"
+                    HorizontalOptions="FillAndExpand"
+                    SelectedItem="{Binding SelectedYear}"
+                    VerticalOptions="CenterAndExpand">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>18</x:String>
+                            <x:String>19</x:String>
+                            <x:String>20</x:String>
+                            <x:String>21</x:String>
+                            <x:String>22</x:String>
+                            <x:String>23</x:String>
+                            <x:String>24</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </StackLayout>
+
+            <Button
+                x:Name="LoadSampleButton"
+                Command="{Binding LoadSampleCommand}"
+                HorizontalOptions="Fill"
+                SemanticProperties.Hint="Загрузка файла для работы нейросети"
+                Text="{Binding Message}" />
+
+            <Button
+                x:Name="MakeSamplePhotoButton"
+                Command="{Binding MakeSamplePhotoCommand}"
+                HorizontalOptions="Fill"
+                SemanticProperties.Hint="Сделать фотографию файла для работы нейросети"
+                Text="{Binding Message2}" />
+
+            <Entry
+                Placeholder="Введите комментарий к образцу"
+                Text="{Binding Comment, Mode=TwoWay}"
+                IsVisible="{Binding ElementsVisible}" />
+
+            <Entry
+                Placeholder="Введите имя сотрудника"
+                Text="{Binding EmployeeName, Mode=TwoWay}"
+                IsVisible="{Binding ElementsVisible}" />
+
+            <Button Command="{Binding UploadPhotosCommand}" Text="{Binding Message3}" IsVisible="{Binding ElementsVisible}" />
+
+            <Label Text="{Binding UploadedFileNames}" IsVisible="{Binding ElementsVisible}" />
+
+            <Button
+                x:Name="UpdateSampleDataButton"
+                Command="{Binding UpdateSampleDataCommand}"
+                HorizontalOptions="Fill"
+                Text="{Binding Message4}"
+                IsVisible="{Binding ElementsVisible}" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

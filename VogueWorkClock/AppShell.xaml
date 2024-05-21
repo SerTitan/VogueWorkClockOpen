@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="VogueWorkClock.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:VogueWorkClock"
+    xmlns:views="clr-namespace:VogueWorkClock.Views">
+
+    <ShellContent
+        Title="Календарь"
+        ContentTemplate="{DataTemplate views:CalendarPage}"
+        Icon="calendar.svg"
+        Route="CalendarPage"
+        Shell.NavBarIsVisible="true" />
+    <ShellContent
+        Title="Добавить новый образец"
+        ContentTemplate="{DataTemplate views:NewSamplePage}"
+        Icon="newsample.svg"
+        Route="NewSamplePage"
+        Shell.NavBarIsVisible="true" />
+    <ShellContent
+        Title="Распознать образец"
+        ContentTemplate="{DataTemplate views:RecognizeSamplePage}"
+        Icon="recognizesample.svg"
+        Route="RecognizeSamplePage"
+        Shell.NavBarIsVisible="true" />
+</Shell>

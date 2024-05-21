@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="VogueWorkClock.Views.CLIPResultPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:VogueWorkClock.ViewModels"
+    x:DataType="vm:CLIPResultViewModel"
+    Title="Выберите ваш образец">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="10" Spacing="10">
+            <!-- Заголовок страницы -->
+            <Label Text="Выберите ваш образец" FontSize="24" HorizontalOptions="Center" />
+
+            <!-- Коллекция с элементами -->
+            <CollectionView x:Name="descriptionsView" ItemsSource="{Binding Descriptions}" SelectionMode="None">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Padding="10" Margin="5" BorderColor="LightGray" CornerRadius="10" HasShadow="False">
+                            <VerticalStackLayout Spacing="10" HorizontalOptions="Fill" VerticalOptions="Fill">
+                                <Label Text="{Binding DescriptionPath}" FontSize="16"/>
+                                <Label FontSize="14">
+                                    <Label.Text>
+                                        <MultiBinding StringFormat="Similarity: {0}">
+                                            <Binding Path="Similarity" />
+                                        </MultiBinding>
+                                    </Label.Text>
+                                </Label>
+                                <Label FontSize="14">
+                                    <Label.Text>
+                                        <MultiBinding StringFormat="Description: {0}">
+                                            <Binding Path="TextDescription" />
+                                        </MultiBinding>
+                                    </Label.Text>
+                                </Label>
+                                <Label FontSize="14">
+                                    <Label.Text>
+                                        <MultiBinding StringFormat="Status: {0}">
+                                            <Binding Path="Status" />
+                                        </MultiBinding>
+                                    </Label.Text>
+                                </Label>
+                                <Label FontSize="14">
+                                    <Label.Text>
+                                        <MultiBinding StringFormat="User: {0}">
+                                            <Binding Path="User" />
+                                        </MultiBinding>
+                                    </Label.Text>
+                                </Label>
+                                <!-- Заменяем карусель на горизонтальный CollectionView -->
+                                <CollectionView ItemsSource="{Binding ImageUrls}" ItemsLayout="HorizontalList" HeightRequest="150">
+                                    <CollectionView.ItemTemplate>
+                                        <DataTemplate>
+                                            <Image Source="{Binding .}" HeightRequest="150" WidthRequest="150" Aspect="AspectFill"/>
+                                        </DataTemplate>
+                                    </CollectionView.ItemTemplate>
+                                </CollectionView>
+                                <Button Text="Выбрать" Clicked="OnItemButtonClicked" CommandParameter="{Binding .}" />
+                            </VerticalStackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

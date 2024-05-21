@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="VogueWorkClock.Views.NewSamplePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:VogueWorkClock.ViewModels"
+    x:DataType="vm:NewSampleViewModel">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25"
+            VerticalOptions="Center">
+
+            <StackLayout Orientation="Horizontal" Spacing="10">
+                <Picker
+                    x:Name="SeasonPicker"
+                    Title="Сезон"
+                    HorizontalOptions="FillAndExpand"
+                    SelectedItem="{Binding SelectedSeason}"
+                    VerticalOptions="CenterAndExpand">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>AW</x:String>
+                            <x:String>SS</x:String>
+                            <x:String>FW</x:String>
+                            <x:String>PS</x:String>
+                            <x:String>RS</x:String>
+                            <x:String>HS</x:String>
+                            <x:String>BC</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <Picker
+                    x:Name="YearPicker"
+                    Title="Год"
+                    HorizontalOptions="FillAndExpand"
+                    SelectedItem="{Binding SelectedYear}"
+                    VerticalOptions="CenterAndExpand">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>18</x:String>
+                            <x:String>19</x:String>
+                            <x:String>20</x:String>
+                            <x:String>21</x:String>
+                            <x:String>22</x:String>
+                            <x:String>23</x:String>
+                            <x:String>24</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <Picker
+                    x:Name="TypePicker"
+                    Title="Тип одежды"
+                    HorizontalOptions="FillAndExpand"
+                    SelectedItem="{Binding SelectedType}"
+                    VerticalOptions="CenterAndExpand">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>blouse</x:String>
+                            <x:String>denim</x:String>
+                            <x:String>jersey</x:String>
+                            <x:String>knit</x:String>
+                            <x:String>outwear</x:String>
+                            <x:String>woven</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </StackLayout>
+
+            <Entry Placeholder="Введите стиль" Text="{Binding Style, Mode=TwoWay}" />
+
+            <Entry Placeholder="Введите описание" Text="{Binding Description, Mode=TwoWay}" />
+
+            <Entry Placeholder="Введите имя сотрудника" Text="{Binding EmployeeName, Mode=TwoWay}" />
+
+            <Button Command="{Binding UploadPhotosCommand}" Text="{Binding Message}" />
+
+            <Label Text="{Binding UploadedFileNames}" />
+
+            <Button Command="{Binding SaveDataCommand}" Text="{Binding Message2}" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

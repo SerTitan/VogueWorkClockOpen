@@ -1,0 +1,24 @@
+blouse/kahta: Blouse with back yoke and loose cut, button fastening, ruching on sleeves and back part
+blouse/mersin: Blouse with front closure strings, collar neck with rushe, long sleeves with puckering and elastic tapes
+blouse/ota: Blouse with back yoke and patch pocket, sleeves have slits with placket
+blouse/tok: Blouse with center seam, back neckline is treated bu fasinf with top stitching Neckline, bottom and sleeved treated two times double folded
+jersey/aradi: Fleece with hight double stand collar with zipper, sleeve hems and bottom hem are treated with cuffs from rib 1*1, cuffs on the sleeves with a hole under the finger
+jersey/kirenia: Fleece with hood and with front pocket, back neckline is treated with s/j binding 0.7 cm width, neckline is treated with top I-needle stitch, hood double folded with dart,  sleeve hems and bottom hem are treated with cuffs from rib 2*2, armhole with top stitch
+jersey/kirenia pants: Fleece pants with back pocket, WB with elastic tape and cotton round cord inside, With 2 chain stitches 1cm+2cm+1cm width, Cuffs made from shell fabric with elastic tape inside
+jersey/modi: Pants with side pocket and side bottom slits, waistband with an elastic tape inside
+jersey/parali: JAmper with front decko detail, Back neckline is treated with s/j binding 0.7 cm width, Neckline is treated with top I-needle stitch, Sleeve hems and bottom hem are treated with cuffs from rib 2*2
+outwear/demra: Jacket with zipper and with high collar, stitching "flatlock" used for the yokes treatments, The back is longer than the front and has a curved bottom edge, one-piece sleeve, Edge of the sleeve treated with bindig, Zipper with two zipperpullers
+outwear/dila: Jacket with hood and two pockets, Bottom with adjustable tunnel and elastic cord
+outwear/gurun: Jacket with collar, made from double rib , with two pockets, Sleeve cuffs made from rib, Fastening with zipper and zipper puller with printed crepe tape
+outwear/silvan: Jacket with asymmetrical fastening and zip and buckle-adorned side pockets, Sleeves with zipper, Bottom hem and shoulders with straps and buckles or buttons, Back part with yoke
+outwear/sivas: Double-breasted long coat with a lapel collar, welt pockets and waist belt, Coat with two-button fastening, Single-seam sleeve
+woven/almada: Hight-waist straight trousers with pleats and side pockets at the front, One welt pocket and two darts at the, There is waistband with asymetric button fastening and fly zip
+woven/amadora: High-rise straight pants, Front with patch pockets, There is waistband with button fastening and fly zip, Two belt loops at the front and two loops at the back
+woven/amadora jacket: Cropped woman jacket, It has single-brested closure with placket and buttons, There are front yoke with flaps and back yoke, Big patch pockets and turn down collar
+woven/amora: Mid-waist trousers of ankle length, Side figured shaped pockets at the front, Patch pockets at the back, There is waistband with metal button and five belt loops, Fly zip
+woven/araban: Mid-lenght skirt with high waist, Bottom with slit on the front, Side zip clousure concealed in the seam, Back with two darts
+woven/borba: Pencil midi skirt with front seam turning into slit, There is zip fly and side figured pockets at the front, Back with two darts, It has waistbelt button fastening and four belt loops, Without lining
+woven/chine: High-waisted pants with flared legs and side zip, Slanted pockets on side seams
+woven/gandra: jacket with single-brested closure on button, Front with flap pockets and notched collar with lapels, Back with centre seam and vent, Sleeves are long with vents, buttons and elbow patches, Jacket with lining
+woven/valensa: Mini length skirt of fitted silhouette, There is hip pockets at the front, It has waistband five belt loops, Hook and bar closure and zip fly
+woven/vizela: Woman pencil midi skirt with asymetrical slit with pleats and button side fastening, Back part with centre seam and darts, Without lining

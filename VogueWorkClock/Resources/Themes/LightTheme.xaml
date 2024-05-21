@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    x:Class="MyApp.Resources.Theme.LightTheme"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <Color x:Key="PrimaryColor">#E4C9B0</Color>
+    <Color x:Key="PageBackgroundColor">White</Color>
+    <Color x:Key="AppTextColor">Black</Color>
+    <Color x:Key="AppButtonColor">Yellow</Color>
+
+</ResourceDictionary>
